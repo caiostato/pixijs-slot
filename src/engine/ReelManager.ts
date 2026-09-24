@@ -71,13 +71,13 @@ export class ReelManager {
     const { REEL_WIDTH, SYMBOL_HEIGHT, SYMBOLS, COLORS } = ENGINE_CONFIG;
 
     const symbolContainer = new Container();
-    
-    // Background block
+
+    // Background block (inset by 5px for visual padding)
     const bg = new Graphics()
       .rect(5, 5, REEL_WIDTH - 10, SYMBOL_HEIGHT - 10)
       .fill(COLORS[symbolId as keyof typeof COLORS]);
     
-    // Text Emoji
+    // Text Emoji — positioned at exact center of the fixed cell
     const style = new TextStyle({
       fontSize: 64,
       align: 'center',
